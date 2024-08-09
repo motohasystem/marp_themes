@@ -1,0 +1,17 @@
+/*!
+ * Marp customized theme.
+ *
+ * @theme distribution
+ * @author Daisuke Motohashi
+ *
+ */
+
+
+@import "default";
+@import "motohasystem";
+
+section.hidden {
+    display:none;
+    content-visibility: hidden;
+}
+

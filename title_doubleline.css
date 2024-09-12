@@ -1,0 +1,244 @@
+/* @theme title_doubleline */
+
+@import "default";
+
+/* Paletton - The Color Scheme Designer
+https://paletton.com/#uid=12P0u0kllll9LU49EU4z32kyK2k */
+
+:root {
+    --main-color: #3498db;
+    /* 青色 */
+    --accent-color: rgba(0, 64, 255, 1);
+    --gradation-base: rgba(255, 255, 0, 1);
+
+    --white-frame: rgba(255, 255, 255, 1);
+    --white-bg: rgba(255, 255, 255, 0.8);
+
+    --kintone-frame: rgba(252, 188, 4, 1);
+    --kintone-bg: rgba(252, 188, 4, 0.8);
+
+
+    --kms-frame: rgba(45, 136, 45, 1);
+    --kms-bg: rgba(45, 136, 45, 0.8);
+    /* --kms-text: rgba(170, 244, 170, 1); */
+
+    --black-frame: rgba(0, 0, 0, 1);
+    --black-bg: rgba(0, 0, 0, 0.8);
+}
+
+
+/* クラス名未指定全スライド共通設定 */
+section {
+    /* フォント指定 */
+    /* font-family: "UD デジタル 教科書体 NK-B", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", Meiryo, sans-serif;
+    font-size: 28pt;
+    font-weight: bolder; */
+
+    background-color: black;
+    border: 24px solid transparent;
+    background-image: linear-gradient(var(--accent-color), var(--gradation-base)), linear-gradient(to right bottom, var(--accent-color), var(--gradation-base));
+
+    width: 1280px;
+    height: 670px;
+}
+
+section p {
+    text-align: center;
+    font-size: 50pt;
+    font-weight: bolder;
+
+    border-radius: 80px;
+    text-shadow:
+        5px 5px 2px black,
+        0 0 1em white,
+        0 0 0.4em white;
+
+    width: 100%;
+    padding: 30px 40px 30px 40px;
+
+    position: relative;
+    left: -3%;
+    top: 38%;
+
+    background-color: var(--accent-color);
+}
+
+
+section h1 {
+    display: none;
+}
+
+
+
+/** normal_above **/
+section.normal_above p {
+    /* 見出し */
+    position: relative;
+    left: -3%;
+    top: -40%;
+}
+
+
+
+/** white **/
+section.white {
+    /* 縁取り */
+    border: 24px solid var(--white-frame);
+}
+
+section.white p {
+    /* 見出し */
+    background-color: var(--white-bg);
+    color: darkorange;
+}
+
+section.white_above {
+    border: 24px solid var(--white-frame);
+}
+
+/** white_above **/
+section.white_above p {
+    /* 見出し */
+    background-color: var(--white-bg);
+    color: darkorange;
+    position: relative;
+    left: -3%;
+    top: -30%;
+}
+
+/** white_center **/
+section.white_center {
+    border: 24px solid var(--white-frame);
+}
+
+section.white_center p {
+    /* 見出し */
+    background-color: var(--white-bg);
+    color: darkorange;
+    position: relative;
+    left: -3%;
+    top: 5%;
+}
+
+
+/** kms **/
+section.kms {
+    /* 縁取り */
+    border: 24px solid transparent;
+    background-image: linear-gradient(var(--kms-frame), var(--gradation-base)), linear-gradient(to right bottom, var(--kms-frame), var(--gradation-base));
+}
+
+section.kms p {
+    /* 見出し */
+    background-color: var(--kms-bg);
+    /* color: var(--kms-text); */
+}
+
+
+/** ttt **/
+section.black {
+    /* 縁取り */
+    border: 24px solid var(--black-frame);
+}
+
+section.black p {
+    /* 見出し */
+    background-color: var(--black-bg);
+}
+
+
+/** black_above **/
+section.black_above {
+    /* 縁取り */
+    border: 24px solid var(--black-frame);
+}
+
+section.black_above p {
+    /* 見出し */
+    background-color: var(--black-bg);
+    /* transform: translate(-3%, -100%); */
+    position: relative;
+    left: -3%;
+    top: -30%;
+}
+
+
+/** kintone **/
+section.kintone {
+    /* 縁取り */
+    border: 24px solid var(--kintone-frame);
+}
+
+section.kintone p,
+h2 {
+    /* 縁取り */
+    background-color: var(--kintone-bg);
+    color: #1D0099;
+    text-shadow:
+        8px 8px 2px white,
+        0 0 1em white,
+        0 0 0.2em white;
+}
+
+
+
+/** kintone **/
+section.kintone-center {
+    /* 縁取り */
+    border: 24px solid var(--kintone-frame);
+}
+
+section.kintone-center p {
+    /* 縁取り */
+    background-color: var(--kintone-bg);
+    color: #1D0099;
+    text-shadow:
+        3px 3px 2px white,
+        0 0 1em white,
+        0 0 0.2em white;
+    position: relative;
+    left: -3%;
+    top: 0%;
+}
+
+section.kintone p strong {
+    color: #fffb00;
+    text-shadow:
+        6px 6px 6px rgb(0, 0, 0),
+        0 0 0.5em rgb(255, 255, 255),
+        0 0 0.1em rgb(255, 255, 255);
+}
+
+
+img {
+    margin: 0 auto;
+    height: 100%;
+}
+
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+
+}
+
+img[src*='#char_right'] {
+    top: 100px;
+    position: absolute;
+    right: 200px;
+    width: 256px;
+    height: 256px;
+    border: 4px solid black;
+    /* 2pxの枠線を引く */
+}
+
+img[src*='#char_left'] {
+    top: 100px;
+    position: absolute;
+    left: 200px;
+    width: 256px;
+    height: 256px;
+    border: 4px solid black;
+    /* 2pxの枠線を引く */
+
+}

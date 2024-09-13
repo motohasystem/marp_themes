@@ -35,7 +35,7 @@ def list_images_in_markdown(file_path):
 
 def list_movies_in_markdown(file_path):
     """
-    引数に与えられたmarkdownファイルの中で参照している画像をリストアップして返す関数
+    引数に与えられたmarkdownファイルの中で参照している動画をリストアップして返す関数
     """
     movie_pattern = re.compile(r'<video\s+src="(.*?)"\s+.*?>')
 
@@ -93,4 +93,6 @@ if __name__ == "__main__":
         print("動画ファイルをコピーします")
         movie_dist = args.movie_dist
         movies = list_movies_in_markdown(file_path)
+        print(movies)
+
         copy_images_to_directory(movies, file_dir, movie_dist)

@@ -32,6 +32,7 @@ section {
 img {
     margin: 0 auto;
     width: 100%;
+    background-color: #0000 !important;
 }
 
 img[src*='#center'] { 
@@ -180,6 +181,11 @@ section.kintone{
     /* background-color: #F3D273; */
     background-color: #DFD;
     background-image: linear-gradient(to bottom left, #F3D273, #FFF);
+}
+
+/* black クラス*/
+section.black{
+    background-color: #000;
 }
 
 

@@ -1,5 +1,8 @@
 (() => {
     document.addEventListener("DOMContentLoaded", (event) => {
+        // 自分自身のファイル名を取得
+        console.log("Gamepad library loaded.");
+
         window.addEventListener("gamepadconnected", (e) => {
             console.log("Gamepad connected:", e.gamepad);
             requestAnimationFrame(updateGamepadStatus);

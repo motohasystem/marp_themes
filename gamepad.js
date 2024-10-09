@@ -4,7 +4,7 @@
             console.log("Gamepad connected:", e.gamepad);
             requestAnimationFrame(updateGamepadStatus);
         });
-        let global_whiteouted = false;
+        // let global_whiteouted = false;
         let global_last_cursor = null;
         let global_last_button = null;
         function updateGamepadStatus() {

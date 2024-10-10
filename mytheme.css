@@ -267,8 +267,12 @@
      margin-left: auto;
      margin-right: auto;
  }
- 
- 
+
+ table td strong{
+    color: red;
+    font-weight:bolder;
+ }
+  
  blockquote {
      /* font-size: 80%; */
      color: black;

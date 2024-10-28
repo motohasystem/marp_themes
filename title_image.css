@@ -1,9 +1,6 @@
-/* @theme title_image */
+/* @theme title_doubleline */
 
 @import "default";
-
-/* Paletton - The Color Scheme Designer
-https://paletton.com/#uid=12P0u0kllll9LU49EU4z32kyK2k */
 
 :root {
     --main-color: #3498db;
@@ -30,10 +27,10 @@ https://paletton.com/#uid=12P0u0kllll9LU49EU4z32kyK2k */
 /* クラス名未指定全スライド共通設定 */
 section {
     /* フォント指定 */
-    font-family: "UD デジタル 教科書体 NK-B", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    /* font-family: "UD デジタル 教科書体 NK-B", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
         "Hiragino Sans", Meiryo, sans-serif;
     font-size: 28pt;
-    font-weight: bolder;
+    font-weight: bolder; */
 
     background-color: black;
     border: 24px solid transparent;
@@ -46,11 +43,9 @@ section {
     height: 670px;
 }
 
-
-section h1 {
-    color: white;
+section p {
     text-align: center;
-    font-size: 60pt;
+    font-size: 46pt;
     font-weight: bolder;
 
     border-radius: 80px;
@@ -67,12 +62,19 @@ section h1 {
     top: 38%;
 
     background-color: var(--accent-color);
+
+    color: white;
+}
+
+
+section h1 {
+    display: none;
 }
 
 
 
 /** normal_above **/
-section.normal_above h1 {
+section.normal_above p {
     /* 見出し */
     position: relative;
     left: -3%;
@@ -87,7 +89,7 @@ section.white {
     border: 24px solid var(--white-frame);
 }
 
-section.white h1 {
+section.white p {
     /* 見出し */
     background-color: var(--white-bg);
     color: darkorange;
@@ -98,7 +100,7 @@ section.white_above {
 }
 
 /** white_above **/
-section.white_above h1 {
+section.white_above p {
     /* 見出し */
     background-color: var(--white-bg);
     color: darkorange;
@@ -112,7 +114,7 @@ section.white_center {
     border: 24px solid var(--white-frame);
 }
 
-section.white_center h1 {
+section.white_center p {
     /* 見出し */
     background-color: var(--white-bg);
     color: darkorange;
@@ -129,7 +131,7 @@ section.kms {
     background-image: linear-gradient(var(--kms-frame), var(--gradation-base)), linear-gradient(to right bottom, var(--kms-frame), var(--gradation-base));
 }
 
-section.kms h1 {
+section.kms p {
     /* 見出し */
     background-color: var(--kms-bg);
     /* color: var(--kms-text); */
@@ -142,7 +144,7 @@ section.black {
     border: 24px solid var(--black-frame);
 }
 
-section.black h1 {
+section.black p {
     /* 見出し */
     background-color: var(--black-bg);
 }
@@ -154,7 +156,7 @@ section.black_above {
     border: 24px solid var(--black-frame);
 }
 
-section.black_above h1 {
+section.black_above p {
     /* 見出し */
     background-color: var(--black-bg);
     /* transform: translate(-3%, -100%); */
@@ -170,7 +172,7 @@ section.kintone {
     border: 24px solid var(--kintone-frame);
 }
 
-section.kintone h1,
+section.kintone p,
 h2 {
     /* 縁取り */
     background-color: var(--kintone-bg);
@@ -181,13 +183,15 @@ h2 {
         0 0 0.2em white;
 }
 
+
+
 /** kintone **/
 section.kintone-center {
     /* 縁取り */
     border: 24px solid var(--kintone-frame);
 }
 
-section.kintone-center h1 {
+section.kintone-center p {
     /* 縁取り */
     background-color: var(--kintone-bg);
     color: #1D0099;
@@ -197,9 +201,16 @@ section.kintone-center h1 {
         0 0 0.2em white;
     position: relative;
     left: -3%;
-    top: -5%;
+    top: 0%;
 }
 
+section.kintone p strong {
+    color: #fffb00;
+    text-shadow:
+        6px 6px 6px rgb(0, 0, 0),
+        0 0 0.5em rgb(255, 255, 255),
+        0 0 0.1em rgb(255, 255, 255);
+}
 
 
 img {

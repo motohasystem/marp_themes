@@ -14,6 +14,8 @@
     --kintone-frame: rgba(252, 188, 4, 1);
     --kintone-bg: rgba(252, 188, 4, 0.8);
 
+    --kintoys-frame: rgba(240, 118, 79, 1);
+    --kintoys-bg: rgba(240, 118, 79, 0.8);
 
     --kms-frame: rgba(45, 136, 45, 1);
     --kms-bg: rgba(45, 136, 45, 0.8);
@@ -210,6 +212,25 @@ section.kintone p strong {
         6px 6px 6px rgb(0, 0, 0),
         0 0 0.5em rgb(255, 255, 255),
         0 0 0.1em rgb(255, 255, 255);
+}
+
+
+
+/** kintoys **/
+section.kintoys {
+    /* 縁取り */
+    border: 24px solid var(--kintoys-frame);
+}
+
+section.kintoys p,
+h2 {
+    /* 縁取り */
+    background-color: var(--kintoys-bg);
+    color: #1D0099;
+    text-shadow:
+        8px 8px 2px white,
+        0 0 1em white,
+        0 0 0.2em white;
 }
 
 

@@ -4,12 +4,15 @@
 
 :root {
     --main-color: #3498db;
-    /* 青色 */
+
     --accent-color: rgba(0, 64, 255, 1);
     --gradation-base: rgba(255, 255, 0, 1);
 
     --white-frame: rgba(255, 255, 255, 1);
     --white-bg: rgba(255, 255, 255, 0.8);
+
+    --black-frame: rgba(0, 0, 0, 1);
+    --black-bg: rgba(0, 0, 0, 0.8);
 
     --kintone-frame: rgba(252, 188, 4, 1);
     --kintone-bg: rgba(252, 188, 4, 0.8);
@@ -19,21 +22,11 @@
 
     --kms-frame: rgba(45, 136, 45, 1);
     --kms-bg: rgba(45, 136, 45, 0.8);
-    /* --kms-text: rgba(170, 244, 170, 1); */
-
-    --black-frame: rgba(0, 0, 0, 1);
-    --black-bg: rgba(0, 0, 0, 0.8);
 }
 
 
 /* クラス名未指定全スライド共通設定 */
 section {
-    /* フォント指定 */
-    /* font-family: "UD デジタル 教科書体 NK-B", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-        "Hiragino Sans", Meiryo, sans-serif;
-    font-size: 28pt;
-    font-weight: bolder; */
-
     background-color: black;
     border: 24px solid transparent;
     background-image: linear-gradient(var(--accent-color), var(--gradation-base)), linear-gradient(to right bottom, var(--accent-color), var(--gradation-base));
@@ -68,22 +61,9 @@ section p {
     color: white;
 }
 
-
 section h1 {
     display: none;
 }
-
-
-
-/** normal_above **/
-section.normal_above p {
-    /* 見出し */
-    position: relative;
-    left: -3%;
-    top: -40%;
-}
-
-
 
 /** white **/
 section.white {
@@ -126,21 +106,8 @@ section.white_center p {
 }
 
 
-/** kms **/
-section.kms {
-    /* 縁取り */
-    border: 24px solid transparent;
-    background-image: linear-gradient(var(--kms-frame), var(--gradation-base)), linear-gradient(to right bottom, var(--kms-frame), var(--gradation-base));
-}
 
-section.kms p {
-    /* 見出し */
-    background-color: var(--kms-bg);
-    /* color: var(--kms-text); */
-}
-
-
-/** ttt **/
+/** black **/
 section.black {
     /* 縁取り */
     border: 24px solid var(--black-frame);
@@ -150,6 +117,7 @@ section.black p {
     /* 見出し */
     background-color: var(--black-bg);
 }
+
 
 
 /** black_above **/
@@ -166,7 +134,6 @@ section.black_above p {
     left: -3%;
     top: -30%;
 }
-
 
 /** kintone **/
 section.kintone {
@@ -186,8 +153,7 @@ h2 {
 }
 
 
-
-/** kintone **/
+/** kintone-center **/
 section.kintone-center {
     /* 縁取り */
     border: 24px solid var(--kintone-frame);
@@ -213,6 +179,23 @@ section.kintone p strong {
         0 0 0.5em rgb(255, 255, 255),
         0 0 0.1em rgb(255, 255, 255);
 }
+
+/** kms **/
+section.kms {
+    /* 縁取り */
+    border: 24px solid transparent;
+    background-image: linear-gradient(var(--kms-frame), var(--gradation-base)), linear-gradient(to right bottom, var(--kms-frame), var(--gradation-base));
+}
+
+section.kms p {
+    /* 見出し */
+    background-color: var(--kms-bg);
+    /* color: var(--kms-text); */
+}
+
+
+/** ttt **/
+
 
 
 

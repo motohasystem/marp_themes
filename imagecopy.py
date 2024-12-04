@@ -18,17 +18,17 @@ def list_images_in_markdown(file_path):
         content = file.read()
         lines = content.split("\n")
         for line in lines:
-            path = image_pattern.findall(line)
-            # pathに#が含まれていれば#以降を削除する
-            if len(path) > 0:
-                path = path[0]
+            paths = image_pattern.findall(line)
+            # 各パスに対して#以降を削除
+            for path in paths:
                 if "#" in path:
                     path = path.split("#")[0]
+                    print(path)
                 images.append(path)
 
-            path = movie_pattern.findall(line)
-            if len(path) > 0:
-                movies.append(path[0])
+            paths = movie_pattern.findall(line)
+            for path in paths:
+                movies.append(path)
 
     return images
 

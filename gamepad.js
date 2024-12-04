@@ -1,10 +1,13 @@
 (() => {
     document.addEventListener("DOMContentLoaded", (event) => {
+        // 自分自身のファイル名を取得
+        console.log("Gamepad library loaded.");
+
         window.addEventListener("gamepadconnected", (e) => {
             console.log("Gamepad connected:", e.gamepad);
             requestAnimationFrame(updateGamepadStatus);
         });
-        let global_whiteouted = false;
+        // let global_whiteouted = false;
         let global_last_cursor = null;
         let global_last_button = null;
         function updateGamepadStatus() {

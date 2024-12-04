@@ -182,7 +182,23 @@
      background-color: #DFD;
      background-image: linear-gradient(to bottom left, #F3D273, #FFF);
  }
- 
+
+  /* kintone-small クラス
+  テーブルを表示する際に利用します。
+  */
+  section.kintone-small{
+    background-color: #DFD;
+    background-image: linear-gradient(to bottom left, #F3D273, #FFF);
+    font-size: 20pt;
+    font-weight: normal;
+  }
+
+  section.kintone-small strong {
+    font-size: 22pt; /* フォントサイズを一つ大きく */
+    color: #FF0000; /* 文字色で強調 */
+  }
+
+
  /* black クラス*/
  section.black{
      background-color: #000;
@@ -200,19 +216,7 @@
      background-image: linear-gradient(to bottom left, #8E8, #CCF);
  }
  
- 
- /* kintone クラス*/
- section.kintone{
-     background-color: #F3D273;
- }
- 
- /* kintone-small クラス*/
- section.kintone-small{
-     background-color: #F3D273;
-     font-size: 22pt;
-     font-weight: normal;
- }
- 
+  
  /* chatgpt クラス*/
  section.chatgpt{
      background-color: #B83468;

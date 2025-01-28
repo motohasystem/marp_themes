@@ -1,4 +1,7 @@
 (() => {
+    const DEBUG = true;
+    const REVERSE_UPDOWN = true;
+    const RAPID_PAGE_SCROLL_GAP = 500;
     document.addEventListener("DOMContentLoaded", (event) => {
         // 自分自身のファイル名を取得
         console.log("Gamepad library loaded.");
@@ -10,6 +13,9 @@
         // let global_whiteouted = false;
         let global_last_cursor = null;
         let global_last_button = null;
+        let global_last_button_time = null;
+        let global_rapid_scroll = false;
+
         function updateGamepadStatus() {
             const gamepads = navigator.getGamepads();
 
@@ -32,6 +38,10 @@
                                 x_newtral = true;
                             }
                         } else if (index == 1) {
+                            if (REVERSE_UPDOWN) {
+                                stick = -stick;
+                            }
+
                             if (stick > 0.5) {
                                 simulateCursorKeyPress("ArrowDown");
                                 y_newtral = false;
@@ -85,16 +95,43 @@
             requestAnimationFrame(updateGamepadStatus);
         }
 
+        // RAPID_PAGE_SCROLL_GAP ミリ秒以内にボタンが押された場合はtrueを返す
+        function isRapidButtonPress() {
+            if (global_last_button_time === null) {
+                return false;
+            }
+            const now = new Date().getTime();
+            if (now - global_last_button_time < RAPID_PAGE_SCROLL_GAP) {
+                return true;
+            }
+            global_rapid_scroll = true;
+            return false;
+        }
+
         // カーソルキーを受け取る
         function simulateCursorKeyPress(key) {
-            if (global_last_cursor === key) {
+            // ニュートラルキーが押された場合はリセットする
+            if (key === "ArrowNewtral") {
+                global_rapid_scroll = false;
+                global_last_cursor = null;
+            }
+
+            // 連続で同じキーが押された場合は無視する
+            if (
+                isRapidButtonPress() == true &&
+                global_rapid_scroll == false &&
+                global_last_cursor === key
+            ) {
                 return;
             }
 
-            console.log({ key });
+            DEBUG ? console.log({ key }) : null;
             const event = new KeyboardEvent("keydown", { key: key });
             document.dispatchEvent(event);
             global_last_cursor = key;
+
+            // 現在時刻を入れる
+            global_last_button_time = new Date().getTime();
         }
 
         // ボタン操作を受け取る
@@ -108,9 +145,9 @@
             document.dispatchEvent(event);
             global_last_button = key;
 
-            if (key === "z") {
+            if (key === "a" || key === "b" || key === "z") {
                 whiteout();
-            } else if (key === "y") {
+            } else if (key === "x" || key === "y") {
                 blackout();
             }
         }

@@ -120,11 +120,14 @@
         0 0 0.2em white;
 }
  
- section h4 {
-     font-size: 30pt;
-     font-weight:900;
-     padding-left:20%
- }
+section h4 {
+    font-size: 70pt;
+    font-weight: 900;
+    color: #B83468;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* テキストをセンタリング */
+}
  
  section h4 strong{
      color: var(--lower-color);
@@ -199,7 +202,23 @@
      background-color: #DFD;
      background-image: linear-gradient(to bottom left, #F3D273, #FFF);
  }
- 
+
+  /* kintone-small クラス
+  テーブルを表示する際に利用します。
+  */
+  section.kintone-small{
+    background-color: #DFD;
+    background-image: linear-gradient(to bottom left, #F3D273, #FFF);
+    font-size: 20pt;
+    font-weight: normal;
+  }
+
+  section.kintone-small strong {
+    font-size: 22pt; /* フォントサイズを一つ大きく */
+    color: #FF0000; /* 文字色で強調 */
+  }
+
+
  /* black クラス*/
  section.black{
      background-color: #000;
@@ -217,19 +236,7 @@
      background-image: linear-gradient(to bottom left, #8E8, #CCF);
  }
  
- 
- /* kintone クラス*/
- section.kintone{
-     background-color: #F3D273;
- }
- 
- /* kintone-small クラス*/
- section.kintone-small{
-     background-color: #F3D273;
-     font-size: 22pt;
-     font-weight: normal;
- }
- 
+  
  /* chatgpt クラス*/
  section.chatgpt{
      background-color: #B83468;

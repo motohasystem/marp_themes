@@ -179,4 +179,26 @@
             document.body.appendChild(whiteout);
         }
     });
+
+    // 画面の右半分をクリックすると次のページに、左半分をクリックすると前のページに移動する
+    document.addEventListener("click", (event) => {
+        const halfWidth = window.innerWidth / 2;
+        if (event.clientX > halfWidth) {
+            goToNextPage();
+        } else {
+            goToPreviousPage();
+        }
+    });
+
+    function goToNextPage() {
+        console.log("次のページに移動します");
+        const event = new KeyboardEvent("keydown", { key: "ArrowRight" });
+        document.dispatchEvent(event);
+    }
+
+    function goToPreviousPage() {
+        console.log("前のページに移動します");
+        const event = new KeyboardEvent("keydown", { key: "ArrowLeft" });
+        document.dispatchEvent(event);
+    }
 })();

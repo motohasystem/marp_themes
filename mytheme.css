@@ -155,7 +155,7 @@ section h4 {
     font-weight: 900;
     color: var(--color-coral);
     text-align: center;
-    margin: auto;
+    /* margin: auto; */
     letter-spacing: -0.03em;
 }
 
